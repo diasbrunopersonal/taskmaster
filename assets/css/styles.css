@@ -12,6 +12,7 @@ body {
 
 .taskContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -46,4 +47,54 @@ div.taskList {
     list-style: none;
     padding: 0;
     margin-top: 20px;
+}
+
+div.taskList>li.task {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+    font-family: "Arial, sans-serif";
+}
+
+div.taskList>li.task:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*
+5️⃣ Delete button (button inside task)
+
+Style:
+
+Background: #ff4d4d (red)
+
+Color: #fff
+
+Border: none
+
+Border-radius: 3px
+
+Padding: 4px 8px
+
+Cursor: pointer
+
+Hover background: #e04343
+*/
+
+div.taskList>li.task>button.btn_delete_task {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+div.taskList>li.task>button.btn_delete_task:hover {
+    background-color: #e04343;
 }

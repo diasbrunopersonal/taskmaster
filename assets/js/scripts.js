@@ -1,5 +1,5 @@
 const taskInput = document.getElementById('input_task_name');
-const taskList = document.querySelector('.tasklist');
+const taskList = document.querySelector('.taskList');
 
 taskInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -10,9 +10,11 @@ taskInput.addEventListener('keydown', (e) => {
 function addTask(taskName) {
     if (taskName !== '') {
         const taskElement = document.createElement('li');
+        taskElement.classList.add("task");
         taskElement.textContent = taskName;
         taskElement.id = `Task_${taskList.childNodes.length}`;
         const deleteTaskBtn = document.createElement('button');
+        deleteTaskBtn.classList.add("btn_delete_task");
         deleteTaskBtn.value = "X";
         deleteTaskBtn.addEventListener("click", () => {
             taskElement.remove();
