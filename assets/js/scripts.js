@@ -9,9 +9,16 @@ taskInput.addEventListener('keydown', (e) => {
 
 function addTask(taskName) {
     if (taskName !== '') {
-        const li = document.createElement('li');
-        li.textContent = taskName;
-        taskList.appendChild(li);
+        const taskElement = document.createElement('li');
+        taskElement.textContent = taskName;
+        taskElement.id = `Task_${taskList.childNodes.length}`;
+        const deleteTaskBtn = document.createElement('button');
+        deleteTaskBtn.value = "X";
+        deleteTaskBtn.addEventListener("click", () => {
+            taskElement.remove();
+        });
+        taskElement.append(deleteTaskBtn);
+        taskList.appendChild(taskElement);
         taskInput.value = '';
     }
 }
