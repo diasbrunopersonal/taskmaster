@@ -37,6 +37,7 @@ input#btn_task_create {
     background-color: #4CAF50;
     color: #fff;
     border-radius: 5px;
+    padding: 10px 15px;
 }
 
 input#btn_task_create:hover {
