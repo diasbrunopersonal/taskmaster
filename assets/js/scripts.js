@@ -13,7 +13,8 @@ function addTask(taskName) {
         taskElement.classList.add("task");
         taskElement.textContent = taskName;
         taskElement.id = `Task_${taskList.childNodes.length}`;
-        const deleteTaskBtn = document.createElement('button');
+        const deleteTaskBtn = document.createElement('input');
+        deleteTaskBtn.type = "button";
         deleteTaskBtn.classList.add("btn_delete_task");
         deleteTaskBtn.value = "X";
         deleteTaskBtn.addEventListener("click", () => {

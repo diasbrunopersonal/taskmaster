@@ -1,0 +1,26 @@
+span.taskCreationContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    width: 100%;
+}
+input#input_task_name {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input#btn_task_create {
+    min-width: fit-content;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+input#btn_task_create:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
